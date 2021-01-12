@@ -1,30 +1,49 @@
-# UD_WHERE_AM_I
-udacity robotics nanodegree project for localization (AMCL) using ROS and Gazebo simulation.
+# UD_MAP_MY_WORLD
 
-## Installation
-```
-cd catkin_ws/src/
-git clone https://github.com/gauti1311/UD_WHERE_AM_I.git
-```
-## Build
-```
+Udacity Robotics Software Engineer Nanodegree Prject of Visual SLAM using RTAB map ROS package.
+
+
+# Installation
+
+```sh
+mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-caktin_make
-```
-## Run the Project
-open a termnial
-```
+catkin_make
 source devel/setup.bash
-roslaunch my_robot world.launch
-```
-in another terminal 
-```
-source devel/setup.bash
-roslaunch my_robot amcl.launch
+cd ~/catkin_ws/src
+git clone rtabmap_ros
+git clone https://github.com/gauti1311/UD_MAP_MY_WORLD.git
 ```
 
-To run teleop node
+Install RTAB-map packge from source using this [link](https://github.com/introlab/rtabmap_ros#build-from-source)
+
+Install package dependencies
+
+```sh
+rosdep install -i rtabmap_ros
+rosdep install -i [package_name]
 ```
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+
+# Build 
+
+```sh
+cd ~/catkin_ws
+catkin_make
 ```
-![UD_WHERE_AM_I](amcl.png)  
+
+# Run
+
+```sh
+roslaunch my_robot world.launch
+roslaunch my_robot teleop.launch
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+Run Robot in simualted gazebo environment slowly using teleop package and create an RTAB-map. 
+
+![UD_MAP_MY_WORLD](demo.gif)  
+
+
+A 3D map generated looks like this
+
+![UD_MAP_MY_WORLD](3Dmap.png)  
