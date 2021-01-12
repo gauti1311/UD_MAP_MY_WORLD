@@ -4,7 +4,7 @@ udacity robotics nanodegree project for localization (AMCL) using ROS and Gazebo
 ## Installation
 ```
 cd catkin_ws/src/
-git clone https://github.com/gauti1311/UD_WHERE_AM_I
+git clone https://github.com/gauti1311/UD_WHERE_AM_I.git
 ```
 ## Build
 ```
