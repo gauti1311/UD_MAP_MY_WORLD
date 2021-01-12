@@ -3,7 +3,7 @@
 Udacity Robotics Software Engineer Nanodegree Prject of Visual SLAM using RTAB map ROS package.
 
 
-# Installation
+## Installation
 
 ```sh
 mkdir -p ~/catkin_ws/src
@@ -24,14 +24,14 @@ rosdep install -i rtabmap_ros
 rosdep install -i [package_name]
 ```
 
-# Build 
+## Build 
 
 ```sh
 cd ~/catkin_ws
 catkin_make
 ```
 
-# Run
+## Run
 
 ```sh
 roslaunch my_robot world.launch
@@ -43,6 +43,13 @@ Run Robot in simualted gazebo environment slowly using teleop package and create
 
 ![UD_MAP_MY_WORLD](demo.gif)  
 
+## View generated map and loop closing using rtab viewer
+
+```sh
+
+rtabmap-databaseViewer ./ros/rtabmap.db 
+
+```
 
 A 3D map generated looks like this
 
